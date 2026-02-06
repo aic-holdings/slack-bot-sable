@@ -382,7 +382,6 @@ if __name__ == "__main__":
     signal.signal(signal.SIGINT, shutdown_handler)
 
     # Track startup time and post startup message
-    global _start_time
     _start_time = time.time()
     logger.info(f"Starting Sable Bot v{BOT_VERSION}...")
     post_status_message(f":white_check_mark: Sable Bot v{BOT_VERSION} is online! (Railway restart complete)")
