@@ -1,3 +1,5 @@
+--extra-index-url https://aic-reader:_XLm5Bhg5q7_Bhxumm67gU03WpEnoDkb@pypiserver-production.up.railway.app/simple/
+slack-bot-core==0.2.0
 slack-bolt>=1.18.0
 slack-sdk>=3.21.0
 httpx>=0.24.0
