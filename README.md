@@ -1,10 +1,10 @@
-# slack-bot-sable
+# Sable Bot
 
 Slack bot for Sable portfolio data queries using semantic-to-SQL translation.
 
 ## Overview
 
-slack-bot-sable enables natural language queries against Sable portfolio data:
+Sable Bot enables natural language queries against Sable portfolio data:
 
 - **Portfolio queries** - "How many open positions do we have?"
 - **P&L tracking** - "What's our YTD P&L?"
@@ -24,8 +24,8 @@ The bot uses AI to translate natural language to SQL queries, executes them agai
 ### Installation
 
 ```bash
-git clone https://github.com/aic-holdings/slack-bot-sable.git
-cd slack-bot-sable
+git clone https://github.com/aic-holdings/sable-bot.git
+cd sable-bot
 pip install -r requirements.txt
 cp .env.example .env
 # Edit .env with your credentials
@@ -65,7 +65,7 @@ railway up
 
 ## Related Projects
 
-- [slack-bot-core](https://github.com/aic-holdings/slack-bot-core) - Shared Slack bot utilities
+- [bot-core](https://github.com/aic-holdings/bot-core) - Bot infrastructure with dependency-injected AI
 - [Sable](https://sable.aicholdings.com) - Portfolio management system
 
 ## License

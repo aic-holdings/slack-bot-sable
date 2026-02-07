@@ -131,7 +131,7 @@ DATA_KEYWORDS = ["how many", "show me", "list", "count", "total", "average", "su
 
 def sable_chat(messages: List[Dict], system_prompt: Optional[str] = None) -> str:
     """
-    Sable's chat_fn for SlackBotRunner.
+    Sable's chat_fn for BotRunner.
 
     Handles two paths:
     1. Data queries → SQL translation → execute → summarize
