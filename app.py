@@ -1,7 +1,7 @@
 """
 Sable Bot — AI assistant for AIC Holdings' Sable portfolio management system.
 
-Uses slack-bot-core for Slack plumbing. Sable-specific logic:
+Uses bot-core for messaging plumbing. Sable-specific logic:
 - OpenRouter API calls (chat_fn)
 - SQL translation for data queries
 - Sable/QA API connectors
@@ -12,7 +12,7 @@ import json
 from typing import Optional, Dict, Any, List
 
 import httpx
-from slack_bot_core import SlackBotRunner, SlackBotConfig
+from bot_core import BotRunner, BotConfig
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -187,12 +187,12 @@ Respond with ONLY the SQL query, no explanations. If you cannot create a valid S
 
 
 if __name__ == "__main__":
-    config = SlackBotConfig(
+    config = BotConfig(
         bot_name="Sable Bot",
         version=BOT_VERSION,
         system_prompt=SYSTEM_PROMPT,
         status_channel=STATUS_CHANNEL,
     )
 
-    runner = SlackBotRunner(chat_fn=sable_chat, config=config)
+    runner = BotRunner(chat_fn=sable_chat, config=config)
     runner.start()
