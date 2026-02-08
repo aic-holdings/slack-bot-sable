@@ -1,0 +1,17 @@
+# Taskr service registration for this repo
+# Source of truth is the taskr database, but this file keeps it in
+# version control so agents know the service context without querying the DB.
+
+name: sable-bot
+title: Sable Bot
+org: aic
+owner: dshanklin
+service_id: bf02fb09-e7ac-4db6-8c31-2a1b2b479f15
+
+repo: aic-holdings/sable-bot
+tags: [slack, bot, ai, sable, portfolio, railway]
+
+deploy:
+  target: railway
+  healthcheck: none
+  start: "python app.py"
